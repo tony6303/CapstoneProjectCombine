@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mycap_team:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>mycap_team</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="mycap_team-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="mycap_team:war exploded" />
+    </root>
+  </artifact>
+</component>
