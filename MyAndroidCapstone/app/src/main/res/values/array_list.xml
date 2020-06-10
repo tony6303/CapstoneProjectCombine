@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list">
+        <item>항목선택</item>
+        <item>폭력적</item>
+        <item>욕설 / 혐오</item>
+        <item>자살 또는 자해</item>
+        <item>관련 없는 항목</item>
+        <item>악성, 피싱 사이트</item>
+        <item>사기 / 사칭 / 허위 정보</item>
+        <item>성인</item>
+        <item>정치</item>
+        <item>기타</item>
+    </string-array>
+</resources>

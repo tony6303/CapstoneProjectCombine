@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/homelistView"
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="119dp">
+
+        <LinearLayout
+            android:id="@+id/itemList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/writerbtn1"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:text="@string/menu1" />
+
+    <Button
+        android:id="@+id/mapbtn"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:text="지도" />
+
+    <Button
+        android:id="@+id/reportbtn"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:text="신고하기" />
+
+    <Button
+        android:id="@+id/mapsearchbtn"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:text="맵 검색" />
+
+    <Button
+        android:id="@+id/writethreadbtn"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:text="스레드 쓰기" />
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <Spinner
+            android:layout_marginTop="10dp"
+            android:id="@+id/array_list"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/list"
+            android:background="@color/shadow"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:text="신고할 내용을 적어주세요"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/mail_content"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:textAlignment="viewStart"
+            android:gravity="start"
+            android:maxLength="500"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginRight="110dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="신고" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="취소"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
