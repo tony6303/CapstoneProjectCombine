@@ -145,9 +145,9 @@ public class HomeActivity extends Activity {
             switch (view.getId()){
                 case R.id.writethreadbtn :
                     try {
-                        Intent intent = new Intent(HomeActivity.this, WriteActivity.class);
+                        Intent intent = new Intent(HomeActivity.this, Dae_MainActivity.class);
                         startActivity(intent);
-                        finish();
+
                     }catch (Exception e) {e.getMessage();}
                     break;
             }

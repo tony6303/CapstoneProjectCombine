@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toLeftOf="@+id/writebutton1"
-        android:src="@drawable/ic_hamburger"
+        android:src="@drawable/ic_baseline_refresh_24"
         android:layout_margin="8dp"
         />
 

@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+//Board = Model
 public class Board {
     private String id;
     private String title;

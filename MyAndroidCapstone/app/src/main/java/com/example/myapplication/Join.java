@@ -17,7 +17,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class Join extends Activity {
-    EditText id, pwd, name, tel, birth;
+    static EditText name;
+    EditText id, pwd, tel, birth;
     Button joinBtn;
     SHA256 sha256;
     @Override
@@ -77,6 +78,7 @@ public class Join extends Activity {
             }
             return receiveMsg; //스트링 버퍼에 저장된 값 리턴 jsp로 부터 받은 값임
         }
+
     }
 
 
