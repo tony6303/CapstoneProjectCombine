@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -32,7 +33,7 @@ public class WriteActivity extends AppCompatActivity implements AdapterView.OnIt
 
     private EditText mWriteTitleText;
     private EditText mWriteContentsText;
-    private EditText mWriteNameText;
+
     private Button mWriteUploadButton; //플로팅액션 버튼 (파란연필)
 
     private String[] ArrayFirstArea = {"부산", "김해", "창원"}; //첫 번째 Spinner에 들어갈 배열
@@ -51,9 +52,12 @@ public class WriteActivity extends AppCompatActivity implements AdapterView.OnIt
     ArrayAdapter<String> weeklist;
 
     String pId, pTitle, pContents, pName, pArea, pWork, pDay;
-
+    String id2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+        id2=MainActivity.id;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write2);
 
@@ -61,7 +65,7 @@ public class WriteActivity extends AppCompatActivity implements AdapterView.OnIt
 
         mWriteTitleText = findViewById(R.id.write_title_text);
         mWriteContentsText = findViewById(R.id.write_contents_text);
-        mWriteNameText = findViewById(R.id.write_name_text);
+
         mWriteUploadButton = findViewById(R.id.write_upload_button);
 
         mFirstArea = (Spinner)findViewById(R.id.first_area);
@@ -82,7 +86,8 @@ public class WriteActivity extends AppCompatActivity implements AdapterView.OnIt
         weeklist = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item, ArrayWeek);
         mWeekend.setAdapter(weeklist);
 
-        final Bundle bundle = getIntent().getExtras();
+        //final Bundle bundle = getIntent().getExtras();
+        final Bundle bundle = null;
         if (bundle != null) {
             //Update
             mWriteUploadButton.setText("수정");
@@ -97,7 +102,7 @@ public class WriteActivity extends AppCompatActivity implements AdapterView.OnIt
             //set data
             mWriteTitleText.setText(pTitle);
             mWriteContentsText.setText(pContents);
-            mWriteNameText.setText(pName);
+
             mFirstArea.setSelection(arealist.getPosition(pArea));
             //mWorkList.setSelection(worklist.getPosition(pWork));
             // Spinner worklist를 잘 못찾는듯.  NullPointerException
@@ -120,24 +125,24 @@ public class WriteActivity extends AppCompatActivity implements AdapterView.OnIt
                     String id = pId;
                     String title = mWriteTitleText.getText().toString();
                     String contents = mWriteContentsText.getText().toString();
-                    String name = mWriteNameText.getText().toString();
+
                     String area = mFirstArea.getSelectedItem().toString();
                     String work = mWorkList.getSelectedItem().toString();
                     String day = mWeekend.getSelectedItem().toString();
 
-                    updateData(id, title, contents, name, area, work, day);
+                    updateData(id, title, contents, id2, area, work, day);
                 }
                 else{
                     //adding new
                     //input data
                     String title = mWriteTitleText.getText().toString();
                     String contents = mWriteContentsText.getText().toString();
-                    String name = mWriteNameText.getText().toString();
+
                     String area = mFirstArea.getSelectedItem().toString();
                     String work = mWorkList.getSelectedItem().toString();
                     String day = mWeekend.getSelectedItem().toString();
 
-                    uploadData(title, contents, name, area, work, day);
+                    uploadData(title, contents, id2, area, work, day);
                 }
 
                 /*
@@ -201,7 +206,7 @@ public class WriteActivity extends AppCompatActivity implements AdapterView.OnIt
         //EditText 속 문자
         post.put("title", mWriteTitleText.getText().toString());
         post.put("contents", mWriteContentsText.getText().toString());
-        post.put("name", mWriteNameText.getText().toString());
+        post.put("name", id2);
 
         //                         document인자로 id를 주면 됨, 인덱스찾는 단서
         mStore.collection("board").document(id).set(post)

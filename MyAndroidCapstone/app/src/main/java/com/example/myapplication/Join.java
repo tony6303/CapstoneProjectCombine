@@ -40,11 +40,12 @@ public class Join extends Activity {
 
         @Override
         protected String doInBackground(String... strings) {
-            Log.d("확인11","조인부분 두잉백");
+
             try{
                 String str;
                 String ip=MainActivity.ip;
-                URL url = new URL("http://"+ip+":8080/mycap_team_war_exploded/");
+                String inputurl=MainActivity.inputurl;
+                URL url = new URL("http://"+ip+inputurl);
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();//url커넥션 객체 생성
                 conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded"); //요청 속성 설정
                 conn.setRequestMethod("POST");//데이터를 POST 방식으로 전송합니다.

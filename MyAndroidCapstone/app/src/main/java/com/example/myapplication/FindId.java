@@ -18,7 +18,7 @@ public class FindId extends AsyncTask<String, Void, String> {
         try{
             String str;
             String ip=MainActivity.ip;
-            URL url = new URL("http://"+ip+":8080/mycap_team_war_exploded/");
+            URL url = new URL("http://"+ip+":8080/mycap_team/index.jsp");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();//url커넥션 객체 생성
             conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded"); //요청 속성 설정
             conn.setRequestMethod("POST");//데이터를 POST 방식으로 전송합니다.

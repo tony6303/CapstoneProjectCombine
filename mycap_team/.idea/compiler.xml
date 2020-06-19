@@ -15,7 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="mycap_team" options="-endorseddirs C:\Users\Administrator\Desktop\BigProject\CapstoneProjectCombine\mycap_team\target/endorsed" />
+      <module name="mycap_team" options="-endorseddirs C:\Users\tony6\Desktop\BigProject\CapstoneProjectCombine\mycap_team\target/endorsed" />
     </option>
   </component>
 </project>

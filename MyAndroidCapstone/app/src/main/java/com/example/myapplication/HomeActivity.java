@@ -26,7 +26,7 @@ public class HomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Intent intent = getIntent();
-        id=intent.getStringExtra("id");
+
         //Log.d("1차 홈액티비티 테스트",id);
         WriterBtn1 = (Button)findViewById(R.id.writerbtn1);
         WriterBtn1.setOnClickListener(btnListener1);
@@ -75,7 +75,6 @@ public class HomeActivity extends Activity {
                     try {
                         Intent intent = new Intent(HomeActivity.this, Write.class);
                         //Log.d("2차 홈액티비티 테스트",id);
-                        intent.putExtra("id",id);
                         startActivity(intent);
                         //finish();
 
@@ -95,6 +94,7 @@ public class HomeActivity extends Activity {
                 case R.id.mapbtn :
                     try {
                         Intent intent = new Intent(HomeActivity.this, MapActivity.class);
+                        startActivity(intent);
                         startActivity(intent);
                     }catch (Exception e) {e.getMessage();}
                     break;
